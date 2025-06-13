@@ -1,0 +1,7 @@
+
+[project]
+name = "my_project_name"
+version = "0.1.0"
+
+[tool.setuptools.packages.find]
+where = ["."] # Look for packages in the current directory (which should find 'src')
