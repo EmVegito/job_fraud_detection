@@ -25,7 +25,7 @@
 ## 🔗 **Links to All the Resources**
 [Explanation Video](https://drive.google.com/drive/folders/1CXLxmNUXfxreYU6wdF5mSa8us2ypelU4?usp=drive_link),
 [Dataset](https://drive.google.com/drive/folders/1CXLxmNUXfxreYU6wdF5mSa8us2ypelU4?usp=drive_link),
-[Streamlit Dashboard]()
+[Streamlit Dashboard](https://job-fraud-detection.streamlit.app/)
 
 ## 🎯 **What This Project Does**
 
@@ -154,11 +154,12 @@ python --version
 ### **Step 3: Install Dependencies**
 
 ```bash
-# Install the project package and dependencies
-python setup.py install
 
 # Alternative: Install from requirements.txt
 pip install -r requirements.txt
+
+# Use this command only if src packages are not found
+python setup.py
 ```
 
 ### **Step 4: Run the ML Pipeline**

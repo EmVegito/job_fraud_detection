@@ -9,4 +9,3 @@ plotly
 wordcloud
 shap
 streamlit
--e .
