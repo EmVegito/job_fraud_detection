@@ -1,3 +1,5 @@
 venv/
 data/raw/
-data/processed/
+data/predictions/
+__pycache__/
+logs/

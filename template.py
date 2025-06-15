@@ -12,10 +12,7 @@ list_of_files=[
     "src/data/data_loader.py",
     "src/data/preprocessor.py",
     "src/models/__init__.py",
-    "src/models/fraud_detector.py",
     "src/models/model_trainer.py",
-    "src/visualization/__init__.py",
-    "src/visualization/dashboard_components.py",
     "src/api/__init__.py",
     "src/api/main.py",
     "src/api/endpoints.py",
@@ -24,6 +21,7 @@ list_of_files=[
     "src/utils/model_utils.py",
     "main.py",
     "app.py",
+    ".gitignore",
     "requirements.txt",
     "setup.py",
     "README.md"

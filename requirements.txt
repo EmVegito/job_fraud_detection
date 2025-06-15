@@ -2,5 +2,11 @@ gdown
 pandas
 numpy
 scikit-learn
+scipy
 matplotlib
+pickle
 seaborn
+plotly
+wordcloud
+shap
+-e
