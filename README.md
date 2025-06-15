@@ -91,6 +91,8 @@ job_fraud_detection/
 │   │   └── data_loader.py           # Google Drive data download utilities
 │   ├── 📂 models/
 │   │   └── model_trainer.py         # ML model training pipeline
+│   ├── 📂 api/
+│   │   └── endpoints.py             # Flas Api endpoints(Not Completed)
 │   ├── logger.py                    # Logging configuration
 │   └── exception.py                 # Custom exception handling
 |   └── utils.py                     # Utility methods
@@ -105,7 +107,8 @@ job_fraud_detection/
 │   └── 📂 predictions/              # Model predictions output
 │       └── test_predictions.csv
 ├── main.py                          # Main pipeline execution
-├── app.py                           # Streamlit dashboard
+├── dashboard.py                     # Streamlit dashboard
+├── app.py                           # Flask Api (Not Completed)
 ├── setup.py                         # Package installation script
 ├── requirements.txt                 # Python dependencies
 ├── template.py                      # File folder structure creation
