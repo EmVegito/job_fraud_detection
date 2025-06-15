@@ -81,13 +81,13 @@ class ModelTrainingPipeline:
                 class_weight='balanced',
             ),
             'ada_boost': AdaBoostClassifier(
-                estimator=DecisionTreeClassifier(random_state=42, criterion='log_loss'),
+                estimator=DecisionTreeClassifier(random_state=42, criterion='log_loss', class_weight='balanced'),
                 random_state=42
             ),
             'random_forest': RandomForestClassifier(
                 random_state=self.random_state,
-                bootstrap=True,  # Use bootstrap sampling
-                oob_score=True,  # Out-of-bag score for internal validation
+                bootstrap=True, 
+                oob_score=True,  
                 max_samples=0.8,
                 class_weight="balanced",
                 max_features=None,
@@ -99,9 +99,9 @@ class ModelTrainingPipeline:
                 random_state=self.random_state,
                 learning_rate=0.1,
                 max_depth=10,
-                validation_fraction=0.1,  # Use 10% for early stopping validation
-                n_iter_no_change=10,  # Early stopping patience
-                tol=1e-4,  # Tolerance for early stopping
+                validation_fraction=0.1,  
+                n_iter_no_change=10,  
+                tol=1e-4, 
                 subsample=0.8,
                 max_features=None,
                 loss='log_loss'
@@ -111,27 +111,27 @@ class ModelTrainingPipeline:
         # Define parameter grids with focus on regularization
         self.param_grids = {
             'logistic_regression': {
-                'penalty': ['l1', 'l2'],  # Regularization type
-                'C': [0.01, 0.1, 1,],        # Inverse of regularization strength
+                'penalty': ['l1', 'l2'], 
+                'C': [0.1, 1, 100],    
             },
             'svm': {
-                'C': [0.1, 1.0],  # Include stronger regularization
+                'C': [0.1, 1.0, 10],  
                 'kernel': ['rbf', 'linear'],
-                'gamma': [0.001, 0.01, 0.1],
+                'gamma': [0.01, 0.1],
             },
             'ada_boost': {
-                'n_estimators': [200, 300],       # Number of boosting stages
-                'learning_rate': [0.05, 0.1], # Shrinks the contribution of each classifier
+                'n_estimators': [200, 300], 
+                'learning_rate': [0.05, 0.1], 
                 'estimator__max_depth': [5, None],
             },
             'random_forest': {
-                'n_estimators': [100, 200],  # Number of trees in the forest
-                'min_samples_split': [2, 3],           # Minimum number of samples required to split an internal node
+                'n_estimators': [100, 200],
+                'min_samples_split': [2, 3],
             },
             'gradient_boosting': {
-                'n_estimators': [300, 400],      # Number of boosting stages
-                'min_samples_split': [5, 10],           # Minimum number of samples required to split an internal node
-                'min_samples_leaf': [4, 6],             # Minimum number of samples required to be at a leaf node       
+                'n_estimators': [300, 400], 
+                'min_samples_split': [5, 10],
+                'min_samples_leaf': [4, 6],      
             }
         }
     

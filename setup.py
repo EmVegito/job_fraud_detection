@@ -22,7 +22,7 @@ def get_requirements(filepath: str) -> List[str]:
 setup(
     name="job_fraud_prediction",
     version='1.0.0',
-    author='aman',
+    author='Amandeep Yadav',
     author_email='ay2728850@gmail.com',
     packages=find_packages(),
     install_requires=get_requirements('requirements.txt')

@@ -13,7 +13,7 @@ class JobFraudDataPipeline:
     Enhanced with outlier handling and proper data leakage prevention.
     """
     
-    def __init__(self, max_tfidf_features=500, test_size=0.2, random_state=42, 
+    def __init__(self, max_tfidf_features=200, test_size=0.2, random_state=42, 
                  outlier_method='iqr', outlier_threshold_multiplier=1.5):
         """
         Initialize the pipeline with configurable parameters.

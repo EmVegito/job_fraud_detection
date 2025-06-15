@@ -13,18 +13,16 @@ list_of_files=[
     "src/data/preprocessor.py",
     "src/models/__init__.py",
     "src/models/model_trainer.py",
-    "src/api/__init__.py",
-    "src/api/main.py",
-    "src/api/endpoints.py",
-    "src/utils/__init__.py",
-    "src/utils/text_processing.py",
-    "src/utils/model_utils.py",
+    "src/logger.py",
+    "src/exception.py",
+    "src/utils.py",
     "main.py",
     "app.py",
     ".gitignore",
     "requirements.txt",
     "setup.py",
     "README.md"
+    "LICENSE"
 ]
 
 for filepath in list_of_files:

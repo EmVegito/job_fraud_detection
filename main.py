@@ -64,7 +64,7 @@ def main():
     
     # Load dataset
 
-    logging("Loadin Training CSV as DataFrame.")
+    logging.info("Loadin Training CSV as DataFrame.")
     df = pd.read_csv('./data/raw/training_data.csv')
     print(f"Dataset loaded: {df.shape[0]} rows, {df.shape[1]} columns")
     
@@ -72,8 +72,8 @@ def main():
     # Initialize pipeline
     logging.info("Initializing Preprocessor for training")
     preprocessor = JobFraudDataPipeline(
-        max_tfidf_features=200,
-        outlier_method='zscore',
+        max_tfidf_features=180,
+        outlier_method='iqr',
         outlier_threshold_multiplier=1.5
     )
 
@@ -86,7 +86,7 @@ def main():
     # Save preprocessor for later use
     preprocessor_path = './data/models/preprocessor.pkl'
     preprocessor.save_pipeline(preprocessor_path)
-    logging("Preprocessor Saved")
+    logging.info("Preprocessor Saved")
     print(f"✅ Preprocessor saved to: {preprocessor_path}")
     
     # ==========================================
@@ -183,7 +183,7 @@ def predict_on_test_data(test_data_path: str = './data/raw/testing_data.csv'):
     print("-" * 40)
     
     try:
-        logging('Predicting on testing_data.csv')
+        logging.info('Predicting on testing_data.csv')
         # Load test data
         df_test = pd.read_csv(test_data_path)
         print(f"Test dataset loaded: {df_test.shape}")
@@ -318,6 +318,7 @@ def train_model_on_full_data(preprocessor_path: str = './data/models/preprocesso
 
         with open('./data/models/final_model.pkl', 'wb') as f:
             pickle.dump(final_model, f)
+        print(f"✅ Final Model saved to: ./data/models/final_model.pkl")
         logging.info('Final Fully trained Model Saved')
     except Exception as e:
         raise CustomException(e, sys)
