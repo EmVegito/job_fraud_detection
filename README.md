@@ -23,8 +23,8 @@
 ---
 
 ## 🔗 **Links to All the Resources**
-[Explanation Video]()
-[Dataset](https://drive.google.com/drive/folders/1CXLxmNUXfxreYU6wdF5mSa8us2ypelU4?usp=drive_link)
+[Explanation Video](https://drive.google.com/drive/folders/1CXLxmNUXfxreYU6wdF5mSa8us2ypelU4?usp=drive_link),
+[Dataset](https://drive.google.com/drive/folders/1CXLxmNUXfxreYU6wdF5mSa8us2ypelU4?usp=drive_link),
 [Streamlit Dashboard]()
 
 ## 🎯 **What This Project Does**
