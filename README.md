@@ -195,12 +195,13 @@ Use the testing_data.csv from Dataset Link(Google Drive) Provided Above
 
 ```python
 from src.models.model_trainer import ModelTrainingPipeline
+from sklearn.naive_bayes import MultinomialNB
 
 # Initialize trainer
-trainer = ModelTrainingPipeline(cv_folds=5, scoring_metric='f1')
+model_trainer = ModelTrainingPipeline(cv_folds=5, scoring_metric='f1')
 
 # Train specific models
-results = trainer.add_custom_model(
+results = model_trainer.add_custom_model(
     name='naive_bayes',
     model=MultinomialNB(),
     param_grid = {'alpha': [0.1, 0.5, 1.0, 2.0], 'fit_prior': [True, False]},
