@@ -200,9 +200,10 @@ from src.models.model_trainer import ModelTrainingPipeline
 trainer = ModelTrainingPipeline(cv_folds=5, scoring_metric='f1')
 
 # Train specific models
-results = trainer.train_models(
-    X_train, y_train,
-    models_to_train=['random_forest', 'svm']
+results = trainer.add_custom_model(
+    name='naive_bayes',
+    model=MultinomialNB(),
+    param_grid = {'alpha': [0.1, 0.5, 1.0, 2.0], 'fit_prior': [True, False]},
 )
 ```
 
