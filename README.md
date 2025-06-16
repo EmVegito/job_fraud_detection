@@ -23,9 +23,9 @@
 ---
 
 ## 🔗 **Links to All the Resources**
-[Explanation Video](https://drive.google.com/drive/folders/1CXLxmNUXfxreYU6wdF5mSa8us2ypelU4?usp=drive_link),
-[Dataset](https://drive.google.com/drive/folders/1CXLxmNUXfxreYU6wdF5mSa8us2ypelU4?usp=drive_link),
-[Streamlit Dashboard](https://job-fraud-detection.streamlit.app/)
+ • [Explanation Video](https://drive.google.com/drive/folders/1CXLxmNUXfxreYU6wdF5mSa8us2ypelU4?usp=drive_link),
+ • [Dataset](https://drive.google.com/drive/folders/1CXLxmNUXfxreYU6wdF5mSa8us2ypelU4?usp=drive_link),
+ • [Streamlit Dashboard](https://job-fraud-detection.streamlit.app/)
 
 ## 🎯 **What This Project Does**
 
@@ -121,7 +121,7 @@ job_fraud_detection/
 
 ### **Prerequisites**
 Install these locally if haven't:
-- Python 3.8 or higher
+- Python 3.11 or higher
 - Git
 - pyenv (recommended for Python version management)
 
@@ -130,10 +130,10 @@ Install these locally if haven't:
 ```bash
 # Assuming you Alrady have git setup in your machine
 # Clone the project repository
-git clone https://github.com/your-username/job-fraud-detection.git
+git clone https://github.com/EmVegito/job_fraud_detection.git
 
 # Navigate to project directory
-cd job-fraud-detection
+cd job_fraud_detection
 ```
 
 ### **Step 2: Set Up Python Environment with pyenv**
